@@ -4,7 +4,7 @@ let lower =  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q
 let upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 let special = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
 
-
+// function invoked generate password/let statement declares a block-scoped local variable
 
 function generatePassword(){
     let password = getPasswordOption();
@@ -19,7 +19,7 @@ function getPasswordOption() {
     let charLen = prompt('How many character password do you want for your password!'); 
     // console.log(charLen);
 
-    // check if password length is a number. Prompts end if this evaluates false/ if statement('for length 8 & length 28')
+    // check if password length is a number. Prompts end if this evaluates false/ if statement('for length < 8 & length > 28')
     
     if (charLen < 8 && charLen > 128) {
         alert('password length must be between 8 && 128');
@@ -42,8 +42,10 @@ function getPasswordOption() {
     }
     // console.log(randomize(num))
 
-    // created four loop used push character option to empty array to be randomly regenrated break indicates to stop loop
     let passwordArr = []
+
+    // created four loop used push character option to empty array to be randomly regenrated break indicates to stop loop
+
     for (let i = 0; i < charLen; i++){
         if(numChar === true){
             let randomChar = randomize(num)
