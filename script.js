@@ -4,7 +4,7 @@ let lower =  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q
 let upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 let special = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
 
-// function invoked generate password/let statement declares a block-scoped local variable
+// function invoked generate password / let statement declares a block-scoped local variable getPasswordOption
 
 function generatePassword(){
     let password = getPasswordOption();
@@ -90,12 +90,14 @@ function randomize(arr) {
 // Id #generate element from html
 let generateBtn = document.querySelector('#generate');
 
+// function invoked writePassword / let statement declares a block-scoped local variable getPasswordOption
+
 function writePassword() {
-    let password = generatePassword();
+    let password = getPasswordOption();
     let passwordText = document.querySelector('#password');
     
         passwordText.value = password;
     }
 
-// generateBtn.onclick = generatePassword;
+
 generateBtn.addEventListener('click', writePassword);
