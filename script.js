@@ -24,7 +24,7 @@ function getPasswordOption() {
 
     // check if password length is a number. Prompts end if this evaluates false/ if statement('for length < 8 & length > 28')
 
-    // "OR" statement asking if password is > 8 or < 128 characters block user attempt 
+    // "OR" statement asking if password is > 8 or < 128 characters block user attempt "Return" statement ends function
 
     if (charLen > 8 || charLen < 128) {
         alert('Password length must be between 8 & 128 characters!');
