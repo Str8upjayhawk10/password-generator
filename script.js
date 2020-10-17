@@ -16,16 +16,18 @@ function generatePassword(){
 // // Function to prompt user for password options
 function getPasswordOption() {
      // char + length = prompt to store length of password from user input / console.log check work
-    let charLen = prompt('How many character password do you want for your password!'); 
-    // console.log(charLen);
+    let length = prompt('How many character password do you want for your password!'); 
+    let charLen = parseInt(length);
+    // console.log(typeof charLen);
 
     // check if password length is a number. Prompts end if this evaluates false/ if statement('for length < 8 & length > 28')
     
-    if (charLen < 8 && charLen > 128) {
+    if (charLen < 8 || charLen > 128) {
         alert('password length must be between 8 && 128');
-        return;
+        
     }
-    //
+    // Varible numChar (CharAt) returned specified character (num, lower, upper, special) index in the string
+
     let numChar = confirm('Click "OK" to comfirm numeric characters!');
     // console.log(numChar);
     let lowerChar = confirm('Click "OK" to comfirm lowercase characters!');
@@ -34,6 +36,7 @@ function getPasswordOption() {
     // console.log(upperChar);
     let specialChar = confirm('Click "OK" to comfirm special characters!');
     // console.log(specialChar);
+
 
     //Password generator ends if none are comfirmed
     if (numChar === false && lowerChar === false && upperChar ===  false && specialChar === false) {
@@ -79,9 +82,9 @@ function getPasswordOption() {
 
 // used "join method," creates and returns a new string by concatenating all of the elements in an array
     let password = passwordArr.join('')
-    return password
+    return password;
 }
-// Function for getting a random element from an array
+// Function used to get random element from an array
 function randomize(arr) {
     console.log(arr)
     let index = Math.floor(Math.random() * arr.length);
