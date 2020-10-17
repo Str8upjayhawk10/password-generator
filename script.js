@@ -27,8 +27,8 @@ function getPasswordOption() {
     // "OR" statement asking if password is > 8 or < 128 characters block user attempt 
 
     if (charLen > 8 || charLen < 128) {
-        alert('password length must be between 8 & 128 characters');
-        
+        alert('Password length must be between 8 & 128 characters!');
+        return;
     }
     // Varible numChar (CharAt) returned specified character (num, lower, upper, special) index in the string
 
@@ -44,7 +44,7 @@ function getPasswordOption() {
 
     //Password generator ends if none are comfirmed
     if (numChar === false && lowerChar === false && upperChar ===  false && specialChar === false) {
-        alert('must select atleast one character type!');
+        alert('Must select atleast one character type!');
         return;
     }
     // console.log(randomize(num))
