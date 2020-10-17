@@ -26,7 +26,7 @@ function getPasswordOption() {
 
     // "OR" statement asking if password is > 8 or < 128 characters block user attempt 
 
-    if (charLen < 8 || charLen > 128) {
+    if (charLen > 8 || charLen < 128) {
         alert('password length must be between 8 & 128 characters');
         
     }
