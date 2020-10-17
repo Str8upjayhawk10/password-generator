@@ -15,15 +15,19 @@ function generatePassword(){
 
 // // Function to prompt user for password options
 function getPasswordOption() {
-     // char + length = prompt to store length of password from user input / console.log check work
-    let length = prompt('How many character password do you want for your password!'); 
-    let charLen = parseInt(length);
+     // char + length = parseInt (parse a string & return an integer) prompt to store length of password from user input / console.log typeof checking
+    //  for a varible(unknown value) or expression(concept using an unknown value)
+
+    let charLen = parseInt(prompt('How many character password do you want for your password!')); 
+    // let charLen = parseInt(length);
     // console.log(typeof charLen);
 
     // check if password length is a number. Prompts end if this evaluates false/ if statement('for length < 8 & length > 28')
-    
+
+    // "OR" statement asking if password is > 8 or < 128 characters block user attempt 
+
     if (charLen < 8 || charLen > 128) {
-        alert('password length must be between 8 && 128');
+        alert('password length must be between 8 & 128 characters');
         
     }
     // Varible numChar (CharAt) returned specified character (num, lower, upper, special) index in the string
