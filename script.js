@@ -24,7 +24,7 @@ function getPasswordOption() {
 
     // check if password length is a number. Prompts end if this evaluates false/ if statement('for length < 8 & length > 28')
     if(isNaN (charLen) === true) {
-        alert("lenght must be a number")
+        alert("length must be a number")
         return;
     }
     // "OR" statement asking if password is > 8 or < 128 characters block user attempt "Return" statement ends function
